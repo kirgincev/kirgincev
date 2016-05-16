@@ -239,25 +239,7 @@ h1{
 }
 
 /* triangle style */
-
-$animation-time: 5s;
-
-@mixin triangle($side) {
-  // height = sqrt(3) * $side;
-  $height: $side * 1.73205080757;
-  // center point = 2/3h
-  transform-origin: 50% 66.66%;
-  content: '';
-  display: block;
-  border: $side solid transparent;
-  border-bottom: $height solid #fff;
-  border-top: 0;
-  height: 0;
-  width: 0;
-  transform-origin: 50% 66.66%;
-}
-
-  
+ 
 .wrapper {
   position: absolute;
   top: 50%;
@@ -271,68 +253,114 @@ $animation-time: 5s;
   height: 346px;
   position: absolute;
   left: 0;
-  animation: rotate $animation-time linear infinite;
-  transform-origin: 50% 66.66%;
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
 }
 
 .triangle-scale {
-  animation: scale $animation-time linear infinite;
-  transform-origin: 50% 66.66%;
-
-  &:after {
-    @include triangle(200px);
-  }
+  -webkit-animation: scale 5s linear infinite;
+          animation: scale 5s linear infinite;
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
+}
+.triangle-scale:after {
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
+  content: '';
+  display: block;
+  border: 200px solid transparent;
+  border-bottom: 346.41016px solid #fff;
+  border-top: 0;
+  height: 0;
+  width: 0;
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
 }
 
-.triangle-scale {
-  &--1:after {
-    border-bottom-color: #f1fbfe;
+.triangle-scale--1:after {
+  border-bottom-color: #f1fbfe;
+}
+.triangle-scale--2:after {
+  border-bottom-color: #dff7ff;
+}
+.triangle-scale--3:after {
+  border-bottom-color: #c6f1ff;
+}
+.triangle-scale--4:after {
+  border-bottom-color: #aceaff;
+}
+.triangle-scale--5:after {
+  border-bottom-color: #90e3fe;
+}
+.triangle-scale--6:after {
+  border-bottom-color: #77ddfe;
+}
+.triangle-scale--7:after {
+  border-bottom-color: #58d5fe;
+}
+.triangle-scale--8:after {
+  border-bottom-color: #39ceff;
+}
+.triangle-scale--9:after {
+  border-bottom-color: #27c8fd;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  &--2:after {
-    border-bottom-color: #dff7ff;
-  }
-  &--3:after {
-    border-bottom-color: #c6f1ff;
-  }
-  &--4:after {
-    border-bottom-color: #aceaff;
-  }
-  &--5:after {
-    border-bottom-color: #90e3fe;
-  }
-  &--6:after {
-    border-bottom-color: #77ddfe;
-  }
-  &--7:after {
-    border-bottom-color: #58d5fe;
-  }
-  &--8:after {
-    border-bottom-color: #39ceff;
-  }
-  &--9:after {
-    border-bottom-color: #27c8fd;
+  to {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
   }
 }
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
   }
 }
-
-@keyframes scale {
+@-webkit-keyframes scale {
   from {
-    transform: scale(1);
-    animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+            animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
   }
   50% {
-    transform: scale(.5);
-    animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+            animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
   }
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+            animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+            animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
