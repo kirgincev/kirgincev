@@ -5,7 +5,33 @@ body{
    overflow-x: hidden;
  }
 
+h1 {
+  font-size: 35px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+}
 
+.text{
+  letter-spacing:5px;
+  text-align:center;
+  font-weight:100;
+  margin-top:480px;
+  position:absolute;
+  width:100%;
+}
+
+@media only screen and (max-width: 582px) {
+
+  .text{
+    letter-spacing:5px;
+    text-align:center;
+    font-weight:100;
+    margin-top:520px;
+    position:absolute;
+    width:100%;
+  }
+
+}
 /* triangle style */
 
 .wrapper {
