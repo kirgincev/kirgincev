@@ -8,7 +8,7 @@ body{
  }
 
 h1 {
-  letter-spacing: 10px;
+  letter-spacing: 7px;
   text-align: center;
   width: 100%;
   font-size: 40px;
@@ -29,7 +29,7 @@ header{
 }
 .text{
   display: block;
-  letter-spacing:5px;
+  letter-spacing:4px;
   text-align:center;
   font-weight:100;
   width:100%;
