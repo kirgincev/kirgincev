@@ -8,6 +8,7 @@ body{
  }
 
 h1 {
+  letter-spacing: 10px;
   text-align: center;
   width: 100%;
   font-size: 40px;
