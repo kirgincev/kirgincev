@@ -61,7 +61,12 @@ h1 {
 
 @media only screen and (max-width: 568px)  and (min-width: 321px) {
 
-
+  .trianlg{
+    margin-top: -140px;
+    width: 300px;
+    height: 400px;
+    display: block;
+  }
 
   h1 {
     letter-spacing: 7px;
