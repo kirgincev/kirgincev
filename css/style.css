@@ -7,6 +7,8 @@ body{
   display: block;
   margin: 0 auto;
  }
+
+
 h1 {
   margin: 0 auto;
   padding: 5px 0px 5px 0px;
@@ -29,11 +31,18 @@ header{
   min-height: 500px;
   padding-top: 0;
 }
-
+a{
+  color: red;
+  text-decoration: none;
+}
+a:hover{
+  opacity: 0.5;
+}
 .cntnt{
   padding: 5%;
 }
 p{
+  font-size: 16px;
   margin-top: 5%;
   width: 100%;
   text-align: center;
@@ -72,7 +81,7 @@ p{
    z-index: 2;
    background-image: url("../img/bg_menu.png");
    width: 100%;
-   height: 40px;
+   height: 50px;
    position: fixed;
    margin: 0 auto;
   }
@@ -92,7 +101,13 @@ p{
         background-color: white;
         overflow: hidden;
   }
-
+.tabs__content img{
+  width: 32px;
+  height: 32px;
+  padding: 0% 2% 0% 2%;
+  display: inline-block;
+  margin: 0 auto;
+}
   .tabs__content {
     text-decoration: none;
     display: none; /* по умолчанию прячем все блоки */
@@ -100,18 +115,27 @@ p{
   .tabs__content.active {
     display: block; /* по умолчанию показываем нужный блок */
   }
+  .img_face{
+    text-align: center;
+  }
   .tabs__caption li {
-    background: #F5F5F5;
-
-
-	border-radius: 60px;
-    padding: 30px;
+    background: #ffffff;
+	  border-radius: 40px;
+    padding: 15px;
     display: inline-block;
   }
+  .tabs__caption{
+    font-size: 14px;
+      text-align: center;
+        margin: 0 auto;
+        padding: 0;
+
+  }
 .tabs__caption li{
+  text-decoration: underline;
   }
   .tabs__caption li.active{
-    background: #FFFAFA;
+    background: #fcfcfc;
 
       text-decoration: none;
     }
@@ -143,8 +167,15 @@ p{
   width: 100%;
   display: inline-block;
 }
+a:hover {
+  opacity: 0.5;
+}
 
  @media only screen and (max-width: 320px) {
+   .img_face img{
+     width: 50%;
+     text-align: center;
+   }
    .trianlg{
      margin-top: -40px;
      width: 300px;
@@ -174,6 +205,10 @@ p{
  }
 
 @media only screen and (max-width: 568px)  and (min-width: 321px) {
+  .img_face img{
+    width: 50%;
+    text-align: center;
+  }
 
   .trianlg{
     margin-top: -60px;
@@ -201,6 +236,10 @@ p{
 
 }
 @media only screen and (max-width: 582px) and (min-width: 569px)  {
+  .img_face img{
+    width: 50%;
+    text-align: center;
+  }
 
   .text{
     letter-spacing:5px;
@@ -220,6 +259,11 @@ p{
 }
 
 @media only screen and  (min-width: 583px)  {
+
+  section{
+    margin: 0 auto;
+    width: 50%;
+  }
 
   .wrapper {
     position: absolute;
