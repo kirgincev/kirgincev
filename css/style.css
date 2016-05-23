@@ -1,5 +1,8 @@
 
 body{
+ font-weight: 100;
+  line-height: 180%;
+  font-family: 'roboto', sans-serif;
   height: 100%;
   display: block;
   margin: 0 auto;
@@ -87,12 +90,61 @@ p{
         width: 100%;
         z-index: 10;
         background-color: white;
+        overflow: hidden;
   }
 
+  .tabs__content {
+    text-decoration: none;
+    display: none; /* по умолчанию прячем все блоки */
+  }
+  .tabs__content.active {
+    display: block; /* по умолчанию показываем нужный блок */
+  }
+  .tabs__caption li {
+    background: #F5F5F5;
+
+
+	border-radius: 60px;
+    padding: 30px;
+    display: inline-block;
+  }
+.tabs__caption li{
+  }
+  .tabs__caption li.active{
+    background: #FFFAFA;
+
+      text-decoration: none;
+    }
+.menu_top li{
+  display: inline-block;
+  padding: 0% 1% 0% 1%;
+
+}
+.logo{
+  left: 1%;
+    position: absolute;
+    margin-left: 5px;
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    margin-top: 5px;
+ }
+.menu_top ul{
+  width: 80%;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10%;
+}
+.menu_li{
+  font-size: 13px;
+  /* margin-top: 5px; */
+  height: 30px;
+  text-align: right;
+  width: 100%;
+  display: inline-block;
+}
 
  @media only screen and (max-width: 320px) {
-
-
    .trianlg{
      margin-top: -40px;
      width: 300px;
@@ -122,7 +174,30 @@ p{
  }
 
 @media only screen and (max-width: 568px)  and (min-width: 321px) {
- 
+
+  .trianlg{
+    margin-top: -60px;
+    width: 300px;
+    height: 400px;
+    display: block;
+  }
+
+  h1 {
+    letter-spacing: 7px;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+  }
+  .wrapper {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -200px;
+  }
+
 
 }
 @media only screen and (max-width: 582px) and (min-width: 569px)  {
