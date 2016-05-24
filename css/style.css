@@ -132,9 +132,12 @@ p{
 
   }
 .tabs__caption li{
-  text-decoration: underline;
-  }
+  background: #B18181;
+  border-radius: 40px;
+  padding: 15px 20px 15px 62px;
+  display: inline-block;  }
   .tabs__caption li.active{
+    display: none;
     background: #fcfcfc;
 
       text-decoration: none;
