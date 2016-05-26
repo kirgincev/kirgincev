@@ -119,10 +119,14 @@ p{
     text-align: center;
   }
   .tabs__caption li {
-    background: #ffffff;
-	  border-radius: 40px;
-    padding: 15px;
+    border-width: 2px;
+    border: 1px double;
+    border-color: black;
+    /* background: #B18181; */
+    border-radius: 40px;
+    padding: 15px 20px 15px 100px;
     display: inline-block;
+
   }
   .tabs__caption{
     font-size: 14px;
@@ -131,11 +135,9 @@ p{
         padding: 0;
 
   }
-.tabs__caption li{
-  background: #B18181;
-  border-radius: 40px;
-  padding: 15px 20px 15px 62px;
-  display: inline-block;  }
+
+
+
   .tabs__caption li.active{
     display: none;
     background: #fcfcfc;
@@ -144,11 +146,11 @@ p{
     }
 .menu_top li{
   display: inline-block;
-  padding: 0% 1% 0% 1%;
+  padding: 0% 2% 0% 2%;
 
 }
 .logo{
-  left: 1%;
+  left: 2%;
     position: absolute;
     margin-left: 5px;
     width: 20px;
@@ -175,6 +177,11 @@ a:hover {
 }
 
  @media only screen and (max-width: 320px) {
+   .tabs__caption li{
+    position: absolute;
+    margin-left: -250px;
+    margin-top: -120px;
+   }
    .img_face img{
      width: 50%;
      text-align: center;
@@ -208,6 +215,11 @@ a:hover {
  }
 
 @media only screen and (max-width: 568px)  and (min-width: 321px) {
+  .tabs__caption li{
+   position: absolute;
+   margin-left: -270px;
+   margin-top: -140px;
+  }
   .img_face img{
     width: 50%;
     text-align: center;
@@ -239,6 +251,11 @@ a:hover {
 
 }
 @media only screen and (max-width: 582px) and (min-width: 569px)  {
+  .tabs__caption li{
+   position: absolute;
+   margin-left: -230px;
+   margin-top: -140px;
+  }
   .img_face img{
     width: 50%;
     text-align: center;
