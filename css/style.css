@@ -1,6 +1,6 @@
 
 body{
- font-weight: 100;
+ font-weight: 300;
   line-height: 180%;
   font-family: 'roboto', sans-serif;
   height: 100%;
@@ -165,13 +165,14 @@ p{
     margin-top: 5px;
  }
 .menu_top ul{
+  margin: 0 auto;
   width: 80%;
-  padding: 0;
+  padding: 12px;
   display: inline-block;
   margin-right: 10%;
 }
 .menu_li{
-  font-size: 13px;
+  font-size: 15px;
   /* margin-top: 5px; */
   height: 30px;
   text-align: right;
