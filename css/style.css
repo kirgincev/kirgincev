@@ -260,7 +260,37 @@ a:hover {
 
 
 }
-@media only screen and (max-width: 582px) and (min-width: 569px)  {
+
+@media only screen and (min-width: 1009px) and (max-width: 1208px) {
+
+  .port_img>iframe
+  {
+  width: 600px;
+  height: 336px;
+    }
+
+}
+
+@media only screen and (min-width: 1209px) and (max-width: 1868px) {
+
+  .port_img>iframe
+  {
+  width: 800px;
+  height: 448px;
+    }
+
+}
+
+@media only screen  and (min-width: 1869px)   {
+
+.port_img>iframe
+{
+width: 1280px;
+height: 720px;
+  }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 582px)   {
   .tabs__caption li{
    position: absolute;
    margin-left: -230px;
@@ -289,6 +319,8 @@ a:hover {
 }
 
 @media only screen and  (min-width: 583px)  {
+
+
 
   section{
     margin: 0 auto;
