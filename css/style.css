@@ -133,7 +133,7 @@ left: 50%;
   }
   .tabs__caption li {
     border-width: 2px;
-    border: 1px double;
+    border: 0px double;
     border-color: black;
     /* background: #B18181; */
     border-radius: 40px;
