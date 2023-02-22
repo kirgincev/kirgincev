@@ -34,7 +34,24 @@
               <meta property="og:url" content="http://kirgincev.info">
               <meta property="og:type" content="website">
 
-    
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+        <script src="js/wow.js"></script>
+
+        <script>
+            new WOW().init();
+        </script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('a[href^="#"]').click(function () {
+                    var target = $(this).attr('href');
+                    $('html, body').animate({scrollTop: $(target).offset().top}, 300);//800 - длительность скроллинга в мс
+                    return false;
+                });
+            });
+        </script>
 
     </head>
     <body>
