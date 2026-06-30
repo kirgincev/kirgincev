@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>youtube</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="youtube" fill-rule="nonzero">
+            <circle id="Oval" fill="#D42428" cx="32" cy="32" r="32"></circle>
+            <path d="M54.563653,9 C67.1449052,21.5823864 67.1459928,41.9814355 54.563653,54.563822 C41.9824008,67.1451208 21.5823398,67.1456646 9,54.563822 L54.563653,9 Z" id="Path" fill="#CC202D"></path>
+            <path d="M63,37.9419599 L47.098434,22 L28.3441801,24.1408101 L17,41.748494 L38.1974781,63 C50.660362,60.3567812 60.4583418,50.4730869 63,37.9419599 Z" id="Path" fill="#BA202E"></path>
+            <path d="M48,25.6993158 C48,23.1037559 45.8590748,21 43.2178067,21 L20.7812621,21 C18.1405261,21 16,23.1042785 16,25.6993158 L16,38.3006842 C16,40.8962441 18.1409252,43 20.7812621,43 L43.2174076,43 C45.8592079,43 47.9996009,40.8957215 47.9996009,38.3006842 L47.9996009,25.6993158 L48,25.6993158 Z M28.7989889,37.3160308 L28.7989889,25.4803297 L37.937798,31.3984416 L28.7989889,37.3160308 Z" id="Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

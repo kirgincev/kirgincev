@@ -1,0 +1,118 @@
+ 
+
+.triangle-rotate {
+  width: 400px;
+  height: 346px;
+  position: absolute;
+  left: 0;
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
+}
+
+.triangle-scale {
+  -webkit-animation: scale 5s linear infinite;
+          animation: scale 5s linear infinite;
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
+}
+.triangle-scale:after {
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
+  content: '';
+  display: block;
+  border: 200px solid transparent;
+  border-bottom: 346.41016px solid #fff;
+  border-top: 0;
+  height: 0;
+  width: 0;
+  -webkit-transform-origin: 50% 66.66%;
+          transform-origin: 50% 66.66%;
+}
+
+.triangle-scale--1:after {
+  border-bottom-color: #f1fbfe;
+}
+.triangle-scale--2:after {
+  border-bottom-color: #dff7ff;
+}
+.triangle-scale--3:after {
+  border-bottom-color: #c6f1ff;
+}
+.triangle-scale--4:after {
+  border-bottom-color: #aceaff;
+}
+.triangle-scale--5:after {
+  border-bottom-color: #90e3fe;
+}
+.triangle-scale--6:after {
+  border-bottom-color: #77ddfe;
+}
+.triangle-scale--7:after {
+  border-bottom-color: #58d5fe;
+}
+.triangle-scale--8:after {
+  border-bottom-color: #39ceff;
+}
+.triangle-scale--9:after {
+  border-bottom-color: #27c8fd;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+}
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+            animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+            animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+            animation-timing-function: cubic-bezier(0.18, 0.58, 0.45, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+            animation-timing-function: cubic-bezier(0.55, 0, 0.82, 0.42);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
