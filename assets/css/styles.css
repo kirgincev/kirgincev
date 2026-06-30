@@ -176,7 +176,7 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
 .case-hero.gas{background:radial-gradient(circle at 78% 10%,rgba(66,217,154,.28),transparent 34%),linear-gradient(135deg,#102036,#0c5744)}
 .case-hero.anylogic{background:radial-gradient(circle at 78% 12%,rgba(154,124,255,.34),transparent 34%),linear-gradient(135deg,#151127,#332455)}
 .case-hero.itmo{background:radial-gradient(circle at 80% 10%,rgba(154,124,255,.36),transparent 34%),linear-gradient(135deg,#111827,#282f75)}
-.case-label{display:inline-flex;margin-bottom:14px;color:#cfe0ff;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.case-label{display:inline-flex;max-width:100%;margin-bottom:14px;color:#cfe0ff;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;white-space:normal;overflow-wrap:anywhere}
 .light .case-label{color:#315178}
 .case-hero h3{max-width:820px}
 .case-hero p{max-width:820px;margin-top:14px;color:#c6d1e2;font-size:18px;line-height:1.48}
@@ -318,6 +318,7 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
   .project-nav{top:61px;margin-left:-2px;margin-right:-2px}
   .case-card{padding:12px;border-radius:18px}
   .case-hero{min-height:auto;padding:22px;border-radius:14px;gap:18px}
+  .case-label{font-size:11px;line-height:1.25;letter-spacing:.05em}
   .case-hero h3{font-size:30px;line-height:1.04}
   .case-hero p{font-size:15px;line-height:1.42}
   .case-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
