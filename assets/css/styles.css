@@ -225,6 +225,8 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
   scroll-padding:4px;
   padding:4px 4px 18px;
   scrollbar-color:#52627a transparent;
+  -webkit-overflow-scrolling:touch;
+  touch-action:pan-x pan-y;
 }
 .carousel figure{
   flex:0 0 min(920px,calc(100vw - 96px));
@@ -235,6 +237,7 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
   background:#070b12;
   overflow:hidden;
   scroll-snap-align:start;
+  touch-action:pan-x pan-y;
 }
 .carousel img{
   width:100%;
@@ -243,6 +246,9 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
   object-position:center;
   padding:12px;
   background:radial-gradient(circle at 50% 20%,rgba(255,255,255,.055),transparent 48%),#070b12;
+  user-select:none;
+  -webkit-user-drag:none;
+  touch-action:pan-x pan-y;
 }
 .carousel figcaption{padding:14px 16px;color:#cbd6e6;font-weight:750;line-height:1.35}
 .carousel-controls{display:flex;justify-content:flex-end;gap:8px}
@@ -259,6 +265,11 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
   cursor:pointer;
 }
 .carousel-controls button:hover{background:rgba(255,255,255,.14)}
+.carousel-controls button:disabled{
+  opacity:.34;
+  cursor:not-allowed;
+  pointer-events:none;
+}
 
 .itmo-section{padding-top:24px}
 .education-card{margin-top:0}
@@ -278,8 +289,10 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
 .about-card h3{font-size:20px;line-height:1.12;letter-spacing:-.015em}
 .about-card p{margin-top:12px;color:var(--muted);line-height:1.45}
 .contact-section{display:grid;grid-template-columns:1.2fr .62fr;gap:24px;align-items:center}
+.contact-stack{display:flex;flex-direction:column;gap:36px}
 .contact-card{padding:24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,rgba(106,165,255,.18),rgba(255,255,255,.05));line-height:1.7}
 .contact-card a{display:inline-block;margin-top:10px;color:#9bc0ff;font-weight:900}
+.resume-link{align-self:flex-start;color:#9bc0ff;font-weight:900}
 
 .case-card,.metric-card,.about-card,.award-grid img{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .case-card.visible,.metric-card.visible,.about-card.visible,.award-grid img.visible{opacity:1;transform:none}
@@ -347,7 +360,8 @@ h3{font-size:clamp(28px,3vw,46px);line-height:1.04;letter-spacing:-.035em}
   .carousel figure{flex-basis:86vw;max-width:86vw;border-radius:14px}
   .carousel img{height:min(58vh,420px);padding:6px}
   .award-grid img{min-height:240px}
-  .contact-card{margin-top:22px}
+  .contact-stack{gap:36px;margin-top:22px}
+  .resume-link{display:inline-block}
 }
 
 @media (max-width:520px){

@@ -17,13 +17,39 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const wrap = carousel.closest('.carousel-wrap');
   const prev = wrap.querySelector('[data-prev]');
   const next = wrap.querySelector('[data-next]');
+  let frame = null;
+
   const step = () => {
     const card = carousel.querySelector('figure');
-    return card ? card.getBoundingClientRect().width + 16 : carousel.clientWidth * .9;
+    if (!card) return carousel.clientWidth * .9;
+    const styles = window.getComputedStyle(carousel);
+    const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+    return card.getBoundingClientRect().width + gap;
+  };
+
+  const updateControls = () => {
+    const maxScroll = Math.max(0, carousel.scrollWidth - carousel.clientWidth);
+    const atStart = carousel.scrollLeft <= 2;
+    const atEnd = carousel.scrollLeft >= maxScroll - 2;
+
+    if (prev) prev.disabled = atStart || maxScroll <= 2;
+    if (next) next.disabled = atEnd || maxScroll <= 2;
+  };
+
+  const requestUpdate = () => {
+    if (frame) cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(updateControls);
   };
 
   prev?.addEventListener('click', () => carousel.scrollBy({ left: -step(), behavior: 'smooth' }));
   next?.addEventListener('click', () => carousel.scrollBy({ left: step(), behavior: 'smooth' }));
+  carousel.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  carousel.querySelectorAll('img').forEach((image) => {
+    image.addEventListener('load', requestUpdate, { once: true });
+  });
+
+  updateControls();
 });
 
 const revealObserver = new IntersectionObserver((entries) => {
